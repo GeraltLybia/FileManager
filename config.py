@@ -21,3 +21,7 @@ CORS_ORIGINS = [origin.strip() for origin in CORS_ORIGINS_STR.split(",") if orig
 # Сервер (для деплоя)
 HOST = os.getenv("HOST", "0.0.0.0")
 PORT = int(os.getenv("PORT", "8000"))
+
+# Максимальный размер одного загружаемого файла, в МБ
+MAX_UPLOAD_SIZE_MB = int(os.getenv("MAX_UPLOAD_SIZE_MB", "500"))
+MAX_UPLOAD_SIZE = MAX_UPLOAD_SIZE_MB * 1024 * 1024
